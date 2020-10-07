@@ -1,0 +1,14 @@
+.register {
+    background-color: #000000 !important;
+    height: 100vh!important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register__container .bg_dark{
+    display: flex !important;
+    align-items: center !important;
+    padding: 40px;
+    margin: 40px;
+}

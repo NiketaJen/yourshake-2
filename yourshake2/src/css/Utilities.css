@@ -1,0 +1,42 @@
+.btn_dark {
+    color: white;
+    background: #000000 0% 0% no-repeat padding-box;
+    border-radius: 100px;
+    opacity: 1;
+    border: none;
+    padding: 10px;
+}
+
+.btn_dark2 {
+    color:#cf9733;
+    background: #000000 0% 0% no-repeat padding-box;
+    border-radius: 100px;
+    opacity: 1;
+    border: none;
+    padding: 10px;
+}
+
+.btn_light {
+    color: #ffffff;
+    background: #cf9733 0% 0% no-repeat padding-box;
+    border-radius: 100px;
+    opacity: 1;
+    border: none;
+    padding: 10px;
+}
+
+.btn_light2 {
+    color: #ffffff;
+    background: #cf9733 0% 0% no-repeat padding-box;
+    border-radius: 100px;
+    opacity: 1;
+    border-color: #000000;
+    padding: 10px;
+}
+
+
+.bg_dark {
+    background: grey;
+    color: #ffffff;
+
+}
