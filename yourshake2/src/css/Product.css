@@ -1,0 +1,21 @@
+/* .product {
+
+    max-height: 200px;
+    background-color: #cf9733;
+    border-radius: 100%;
+} */
+
+.product__image {
+    
+    max-height: 200px;
+    width: 100%;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.product__card {
+    width: 50%;
+    margin: 80px auto 80px auto;
+    /* border: 1px solid #9e9e9e; */
+    border-radius: 8px;
+}

@@ -1,0 +1,27 @@
+.productContainer {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 20px 40px;
+ 
+}
+
+.productContainer__pageCounter {
+    display: flex;
+    justify-content: flex-end; 
+}
+
+.productContainer__column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+    flex-wrap: wrap;
+}
+
+.productContainer__row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 0 4px;
+}
