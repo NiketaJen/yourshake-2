@@ -1,57 +1,62 @@
 .header {
-    height: 80px;
+    padding: 30px;
     display: flex;
     align-items: center;
     position: sticky;
-    top: 0;
+    /* top: 0; */
     z-index: 100;
-    justify-content: row;
+    justify-content: space-between;
+    background-image: transparent linear-gradient(180deg, #020202 0%, #00000000 100%)  0% 0% no-repeat padding-box;
+    /* opacity: 0.33%; */
 }
 
 .header__logo {
-    display: flex;
+    /* display: flex;
     width: 100px;
     margin: 0 40px;
-    margin-top: 18px;
+    margin-top: 18px; */
     color: #cf9733;
     font-weight: 800;
     text-decoration: none;
+    /* z-index: ; */
 }
 
 .header__nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    width: 70%;
     align-items: center;
-    /* position: sticky; */
 }
 
 .header__option {
-    display: flex;
+    /* display: flex; */
     /* color: #fff; */
-    /* flex-direction: column; */
-    margin-left: 10px;
-    margin-right: 10px;
+    /* flex-direction: row-reverse; */
+  
+    /* margin-left: 10px; */
+    /* margin-right: 10px; */
     cursor: pointer;
     text-decoration: none;
-    font-size: 16px;
-    justify-content: flex-end;
+    font-weight: 600;
+    /* font-size: 16px; */
+    /* justify-content: flex-end; */
     color: #000000;
 }
 
 .header__optionCart{
-    display: flex;
-    align-items: center;
+    /* display: flex; */
+    /* align-items: center; */
     cursor: pointer;
-    justify-content: flex-end;
+    /* justify-content: flex-end; */
 }
 
 .header__btn {
-    display: flex;
+    /* display: flex; */
     font: normal normal bold 16px/83px ;
     cursor: pointer;
-    justify-content: flex-end;
+    /* justify-content: flex-end; */
     text-decoration: none;
-    border-radius: 50% !important;
+    border-radius: 75% !important;
     /* position: fixed; */
 }
 
