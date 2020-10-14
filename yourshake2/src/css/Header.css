@@ -4,9 +4,9 @@
     align-items: center;
     position: sticky;
     /* top: 0; */
-    z-index: 100;
+    /* z-index: 100; */
     justify-content: space-between;
-    background-image: transparent linear-gradient(180deg, #020202 0%, #00000000 100%)  0% 0% no-repeat padding-box;
+    /* background: transparent linear-gradient(180deg, #020202 0%, #00000000 100%)  0% 0% no-repeat padding-box; */
     /* opacity: 0.33%; */
 }
 

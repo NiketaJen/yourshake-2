@@ -24,7 +24,8 @@ function Payment() {
     const [processing, setProcessing] = useState("")
     const [clientSecret, setClientSecret] = useState(true)
 
-    const[address, setAddress] = useState('')
+    const[address1, setAddress1] = useState('')
+    const[address2, setAddress2] = useState('')
     const[country, setCountry] = useState('')
     const[state, setState] = useState('')
     const[zip, setZip] = useState('')
@@ -48,6 +49,17 @@ function Payment() {
 
     const updateUser = (e) => {
         e.preventDefault();
+
+        db
+        .collection('users')
+        .doc(user?.uid)
+        .set({
+            address1: address1, 
+            address2: address2, 
+            country: country,
+            state: state, 
+            zip: zip, 
+        },{merge: true})
     }
 
     const handleSubmit = async (e) => {
@@ -108,10 +120,10 @@ function Payment() {
                         <h3>Delivery Address</h3>
                     </div>
                     <div className="payment__address">
-                        <p>{user?.email}</p>
+                        <p>{user?.firstName}</p>
                         <form onSubmit={updateUser}>
-                            <input type="text" placeholder="Street Address" onChange={e => setAddress(e.target.value)} value={address} />  
-                            <input type="text" placeholder="Apartment, suite, building, floor" onChange={e => setAddress(e.target.value)} value={address} />
+                            <input type="text" placeholder="Street Address" onChange={e => setAddress1(e.target.value)} value={address1} />  
+                            <input type="text" placeholder="Apartment, suite, building, floor" onChange={e => setAddress2(e.target.value)} value={address2} />
                             <input type="text" placeholder="State" onChange={e => setState(e.target.value)} value={state}  /> 
                             <input type="text" placeholder="Country" onChange={e => setCountry(e.target.value)} value={country} /> 
                             <input type="text" placeholder="Zip Code" onChange={e => setZip(e.target.value)} value={zip}  /> 

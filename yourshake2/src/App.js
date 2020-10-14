@@ -8,6 +8,10 @@ import Login from "./Login"
 import ProductContainer from "./ProductContainer"
 import SingleProductContainer from "./SingleProductContainer"
 import Payment from "./Payment"
+import Subheader from "./Subheader"
+import Orders from "./Orders"
+import Home from "./Home"
+import Footer from "./Footer"
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom"
 import {auth} from "./firebase"
 import { useStateValue } from './StateProvider';
@@ -71,10 +75,15 @@ function App() {
               <Header />
               <Checkout />
           </Route>
+          <Route path="/orders">
+            <Header />
+            <Orders/>
+          </Route>
           <Route path= "/">
               <Header />
-              {/* Home */}
-              {/* Footer */}
+              <Subheader/>
+              <Home/>
+              <Footer/>
           </Route>
         </Switch>
       </div>
