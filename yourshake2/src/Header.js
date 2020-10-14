@@ -5,20 +5,21 @@ import { Link, useHistory } from "react-router-dom"
 import { useStateValue } from './StateProvider';
 import { auth } from './firebase';
 
+
 function Header() {
     let history = useHistory()
 
     const handleClick = () => {
         history.push('/login')
-    }
+    };
 
-    const[{cart, user}] = useStateValue()
+    const[{cart, user}] = useStateValue();
 
     const handleAuthentication = () => {
         if(user) {
             auth.signOut();
         }
-    }
+    };
 
     return (
         <div className="header">
@@ -69,8 +70,9 @@ function Header() {
             </div>
             
             
+            
         </div>
     )
-}
+};
 
 export default Header

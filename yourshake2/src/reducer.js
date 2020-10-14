@@ -54,7 +54,7 @@ const reducer = (state, action) => {
             case 'REMOVE_SINGLE_PRODUCT':
                 return {
                     ...state,
-                    singleProduct: [...state.singleProduct, action.item]
+                    singleProduct: []
                 };
             
         default:

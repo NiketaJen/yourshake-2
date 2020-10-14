@@ -4,7 +4,8 @@ import {useHistory} from "react-router-dom"
 import {auth, db} from "./firebase"
 
 function Register() {
-    const[displayName, setDisplayName] = useState('')
+    const[firstName, setFirstName] = useState('')
+    const[lastName, setLastName] = useState('')
     const[email, setEmail] = useState('')
     const[password, setPassword] = useState('')
 
@@ -14,11 +15,12 @@ function Register() {
         e.preventDefault();
 
         auth.createUserWithEmailAndPassword(email, password)
-        // .then(cred => {
-        //     return db.collection('users').doc(cred.user.uid).set({
-        //         displayName: displayName
-        //     })
-        // })
+        .then(cred => {
+            return db.collection('users').doc(cred.user.uid).set({
+                firstName: firstName, 
+                 lastName: lastName
+            })
+        })
         .then(auth => {
             console.log(auth)
             if (auth) {
@@ -30,13 +32,14 @@ function Register() {
     }
     return (
         <div className="register">
-            <h1>register account page</h1>
             <div className="register__container bg_dark">
                 <h1>Create an Account</h1>
 
                 <form>
                     
-                    <input type="text" placeholder="Username" name="displayName" onChange={e => setDisplayName(e.target.value)} value={displayName} />  
+                    <input type="text" placeholder="First Name" name="firstName" onChange={e => setFirstName(e.target.value)} value={firstName} /> 
+
+                    <input type="text" placeholder="Last Name" name="lastName" onChange={e => setLastName(e.target.value)} value={lastName} /> 
 
                     <input type="text" placeholder="Email" onChange={e => setEmail(e.target.value)} value={email} />  
                     

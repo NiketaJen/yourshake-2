@@ -1,0 +1,73 @@
+.home {
+    display: flex;
+     align-items: center; 
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.home__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000000;
+    flex-direction: column;
+}
+
+.home__titleLineOne {
+    font-size: 100px; 
+    font-weight: 900;
+}
+
+.home__titleLineTwo {
+    font-size: 100px; 
+    font-weight: 900;
+}
+
+.home__subtitle {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.home__subtitleLogo {
+    color: #cf9733;
+    font-weight: 700;
+}
+
+.home__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 20px;
+    width: 45%;
+    
+}
+
+.btn_dark3  {
+    font-weight: 700;
+}
+
+.home__brands {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.home__brandsTitle {
+    display: flex;
+    justify-content: center;
+    font-size: 30px; 
+    font-weight: 900;
+    color: #00000058;
+    font: italic bolder;
+    margin-top: 40px;
+    padding: 20px;
+}
+
+.home__brandsList{
+    color: #00000058;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
