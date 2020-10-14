@@ -42,12 +42,18 @@ function Header() {
                 <div className="header__option">
                     What Are Protein Supplements
                 </div>
+                
                 <div className="header__option">
                     FDA Ingredient Advisory List
                 </div>
+
+                <Link to="/checkout">
                 <div className="header__optionCart">
                     <ShoppingCartIcon/>
+                    <span className="header_optionLineTwo header_cartCount">
+                            {cart?.length}</span>
                 </div>
+                </Link>
 
                 <Link to={!user && '/login'} className="header__btn">
                 <button onClick={handleAuthentication}  className="header__btn btn_dark">{user ? 'Sign Out' : 'Sign In'}</button>
