@@ -1,61 +1,49 @@
-import React, {useState, useEffect} from 'react'
+import React from 'react'
 import "./css/Product.css"
-import {Link, useHistory } from "react-router-dom"
-import SingleProduct from './SingleProduct'
-import {db} from "./firebase"
+import {useHistory } from "react-router-dom"
+import { useStateValue } from "./StateProvider";
 
 
 function Product(props) {
     let history = useHistory()
-    const [SingleProduct, setSingleProduct] = useState([])
+    const product = props.product
+    const[{singleProduct}, dispatch] = useStateValue();
     
-    const handleClick = () => {
-        console.log("click click")
-        // useEffect(() => {
-        //     db.collection('products').onSnapshot(snapshot => {
-        //        // console.log(snapshot.docs)
-        //       let fetchedProducts = []
-     
-        //        snapshot.forEach(doc => {
-        //           // console.log(doc.id, '=>', doc.data());
-        //            let currentProductData = doc.data()
-        //            let id = doc.id
-        //            let currentProduct = {id, ...currentProductData}
-        //            console.log(currentProduct)
-        //            fetchedProducts.push(currentProduct)
-        //          });
-        //          setProducts(fetchedProducts)
-                 
-        //         }
-        //     )
-           
-        //  }, [])
-        
-        history.push('/product/:id')
-    }
+    const showSingleProduct = () => {
+        // dispatch item
+        dispatch({
+            type: 'SHOW_SINGLE_PRODUCT',
+            item: {
+                id: product.id, 
+                companyName: product.companyName,
+                productName: product.productName,
+                mainImage: product.mainImage,
+                price: product.price,
+                description: product.description,
+                flavorCount: product.flavorCount,
+            }
+        });
+        history.push(`/products/${product.id}`)
+    };
+  
     return (
         <div className="product">
-            {/* <Link to={`/products/${props.id}`}> */}
-            <div className="product__card" onClick={handleClick} >
+            <div className="product__card" onClick={showSingleProduct} >
                 <img 
                 className="product__image"
-                src={props.mainImage}
+                src={product.mainImage}
                 alt=""
                 />
-                <p>{props.companyName}</p>
-               {/* <p>{productName}</p> */}
-                <p>{props.flavorCount} Flavors Available</p>
+                <p>{product.companyName}</p>
+                <p>{product.flavorCount} Flavors Available</p>
                 {/* <p>{tag}</p> */}
                 <p className="product__price">
                     <small>$</small>
-                    <strong>{props.price}</strong>
+                    <strong>{product.price}</strong>
                 </p>
-               
             </div>
-            {/* </Link> */}
-            
         </div>
     )
-}
+};
 
 export default Product

@@ -2,7 +2,11 @@ export const initialState = {
     products: [],
     cart: [],
     user: null,
+    singleProduct: [],
 }
+
+export const getCartTotal = (cart) => 
+  cart?.reduce((amount, item) => item.price + amount, 0); 
 
 const reducer = (state, action) => {
     console.log(action)
@@ -39,7 +43,19 @@ const reducer = (state, action) => {
                 return {
                     ...state,
                     user: action.user
-                }
+                };
+
+            case 'SHOW_SINGLE_PRODUCT':
+                return {
+                    ...state,
+                    singleProduct: [...state.singleProduct, action.item]
+                };
+
+            case 'REMOVE_SINGLE_PRODUCT':
+                return {
+                    ...state,
+                    singleProduct: [...state.singleProduct, action.item]
+                };
             
         default:
             return state

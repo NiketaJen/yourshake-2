@@ -34,9 +34,24 @@
     padding: 10px;
 }
 
+.btn_light3 {
+    color: #cf9733;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    border-radius: 100px;
+    opacity: 1;
+    border-color: #cf9733;
+    padding: 10px;
+}
+
 
 .bg_dark {
     background: grey;
+    color: #ffffff;
+
+}
+
+.bg_light {
+    background: #cf9733;
     color: #ffffff;
 
 }

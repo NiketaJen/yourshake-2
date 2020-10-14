@@ -6,7 +6,7 @@ import Checkout from "./Checkout"
 import Register from "./Register"
 import Login from "./Login"
 import ProductContainer from "./ProductContainer"
-import SingleProduct from "./SingleProduct"
+import SingleProductContainer from "./SingleProductContainer"
 import Payment from "./Payment"
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom"
 import {auth} from "./firebase"
@@ -49,7 +49,7 @@ function App() {
         <Switch>
           <Route path="/products/:id">
               <Header />
-              <SingleProduct/>
+              <SingleProductContainer/>
           </Route>
           <Route path="/products">
               <Header />

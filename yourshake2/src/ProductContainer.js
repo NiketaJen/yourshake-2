@@ -42,15 +42,16 @@ function ProductContainer() {
             
             <div className="productContainer__row">
                 <div className="productContainer__column">
-                    {products.map(({id, mainImage, companyName, flavorCount, price}) => (
+                    {products.map((product) => (
                         
                          <Product 
-                         id={id}
-                         key={id}
-                         mainImage={mainImage}
-                         companyName={companyName}
-                         flavorCount={flavorCount}
-                         price={price}  
+                         id={product.id}
+                         key={product.id}
+                         product={product}
+                         //mainImage={product.mainImage}
+                        // companyName={companyName}
+                         //flavorCount={flavorCount}
+                         //price={price}  
                          />
                     ))}
                    
