@@ -17,7 +17,8 @@ function Subheader() {
             <div className="subheader__search">
                  <input 
                     className="subheader_searchInput"
-                    type="text"/>
+                    type="text"
+                    placeholder="Product Search"/>
                     <SearchIcon className="subheader_searchIcon"
                     />
             </div>
