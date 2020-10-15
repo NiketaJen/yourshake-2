@@ -1,6 +1,6 @@
 .footer {
     display: flex;
-    max-width: 1400px;
+    /* max-width: 1400px; */
 }
 
 .footer__left {
@@ -37,12 +37,19 @@
 }
 
 .footer__columns {
+    /* display: flex;
+    justify-content: space-evenly; */
+    /* max-width: 80%; */
+    object-fit: contain;
     display: flex;
-    justify-content: space-between;
-    max-width: 70%;
+    justify-content: space-around;
+    width: 70%;
+    align-items: center;
 }
 
 .footer__header{
     display: flex;
-    justify-content: space-evenly;
+    font-weight: 700;
+    font-size: 25px;
+    /* justify-content: space-evenly; */
 }
