@@ -21,7 +21,7 @@ function SingleProductContainer() {
         <div className="singleProductContainer">
             
             <div className="singleProductContainer__top">
-                <button className="singleProductContainer__btn btn_dark2" onClick={removeSingleProduct}>Back</button>
+                <button className="singleProductContainer__btn btn_light" onClick={removeSingleProduct}>Back</button>
             </div>
             <div className="singleProductContainer__main">
             {singleProduct.map(item => (

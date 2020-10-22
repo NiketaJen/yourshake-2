@@ -7,7 +7,7 @@ import {db} from "./firebase"
 function Subheader() {
     const[{user}] = useStateValue()
 
-    //const userName = db.collection("users").doc(user.uid).get().then(doc => `${doc.data().firstName}`)
+   //const userName = db.collection("users").doc(user.uid).get().then(doc => `${doc.data().firstName}`)
  
     return (
         <div className="subheader">

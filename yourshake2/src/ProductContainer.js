@@ -41,7 +41,6 @@ function ProductContainer() {
             </div>
             
             <div className="productContainer__row">
-                <div className="productContainer__column">
                     {products.map((product) => (
                         
                          <Product 
@@ -54,9 +53,6 @@ function ProductContainer() {
                          //price={price}  
                          />
                     ))}
-                   
-                </div>
-              
 
             </div>
         </div>

@@ -22,11 +22,9 @@ function Footer() {
                 
            </div>
          <div className="footer__right">
-            <div className="footer__columns">
                 <div className="footer__header">Contact Us</div>
                 <div className="footer__header">Social</div>
                 <div className="footer__header">Suggestions</div>
-            </div>
         </div>         
         </div>
     )

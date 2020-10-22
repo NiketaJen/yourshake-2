@@ -4,7 +4,7 @@
     border-radius: 100px;
     opacity: 1;
     border: none;
-    padding: 20px;
+    padding: 10px;
 }
 
 .btn_dark2 {
@@ -34,6 +34,16 @@
     padding: 10px;
 }
 
+.btn_light_subtotal {
+    color: #ffffff;
+    background: #cf9733 0% 0% no-repeat padding-box;
+    border-radius: 100px;
+    opacity: 1;
+    border: none;
+    padding: 10px;
+    margin: 20px 0px 0px 0px;
+}
+
 .btn_light2 {
     color: #ffffff;
     background: #cf9733 0% 0% no-repeat padding-box;
@@ -54,13 +64,11 @@
 
 
 .bg_dark {
-    background: grey;
+    background: #2E323E;
     color: #ffffff;
-
 }
 
 .bg_light {
     background: #cf9733;
     color: #ffffff;
-
 }

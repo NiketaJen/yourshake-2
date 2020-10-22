@@ -1,0 +1,26 @@
+.fas .fa-mars{
+    font-size: 90px;
+}
+
+.firstStep{
+    margin: auto;
+    width: 50%;
+    border: 1px solid #888;
+    border-radius: 16px;
+    padding: 32px;
+}
+
+.firstStep h2 {
+    margin: 16px 0px 16px 0px;
+}
+
+.next_btn  {
+ width: 80px;
+}
+
+.quiz__btnFirst{
+    display: flex;
+    padding-top: 16px;
+    justify-content: flex-end;
+   /* border-top: solid 1px #888; */
+  }
