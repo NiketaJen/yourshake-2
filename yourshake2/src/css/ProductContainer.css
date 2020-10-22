@@ -12,16 +12,19 @@
     justify-content: flex-end; 
 }
 
-.productContainer__column {
+/* .productContainer__column {
+
     flex: 25%;
     max-width: 25%;
     padding: 0 4px;
     flex-wrap: wrap;
-}
+} */
 
 .productContainer__row {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    padding: 0 4px;
+    flex-direction: row;
+    padding: 0 10px;
+   
 }

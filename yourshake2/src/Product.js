@@ -34,7 +34,7 @@ function Product(props) {
                 src={product.mainImage}
                 alt=""
                 />
-                <p>{product.companyName}</p>
+                <p className="product__title">{product.companyName}</p>
                 <p>{product.flavorCount} Flavors Available</p>
                 {/* <p>{tag}</p> */}
                 <p className="product__price">

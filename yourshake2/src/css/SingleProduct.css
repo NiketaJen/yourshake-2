@@ -1,5 +1,88 @@
+
 .singleProduct__button:hover {
     background: #cf9733;
     color: #ffffff;
-    
+}
+
+.singleProduct {
+    margin: 30px 10px 10px 10px;
+    padding: 10px;
+}
+
+.singleProduct__container {
+    display: flex;
+    justify-content: space-evenly;
+    /* align-items: center !important; */
+}
+
+.singleProduct__left{
+    display: flex !important;
+    flex-direction: column;
+    /* align-items: center; */
+}
+
+.singleProduct__image{
+    height: 500px;
+    width: 547px;
+}
+
+.singleProduct__right{
+    display: flex !important;
+    flex-direction: column;
+}
+
+.singleProduct__productName{
+    font-size: 35px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.singleProduct__flavor{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.singleProduct__price{
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.sectionTitle{
+    font-size: 32px;
+    margin-bottom: 10px;
+    top: 409px;
+    left: 850px;
+    width: 410px;
+    height: 77px;
+    padding: 15px;
+  
+}
+
+.sectionTitle__main{
+    top: 1258px;
+    left: 144px;
+    width: 865px;
+    height: 77px;
+    font-size: 32px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 15px;
+}
+
+.singleProduct__disclosure{
+    margin-top: 50px;
+}
+
+.singleProduct__description p {
+    display: flex;
+    flex-wrap: wrap;
+    width: 865px;
+}
+
+.singleProduct__reviews p {
+    margin-left: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 865px;
 }
