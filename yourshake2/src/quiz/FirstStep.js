@@ -7,38 +7,31 @@ function FirstStep() {
     const {setStep, userData, setUserData} = useContext(multiStepContext)
     return (
         <div className="firstStep">
-            
-              <h2>What gender do you most identify with?</h2> 
-            
-            <div >
-                <div>
-                <label className="container">Male <Icon className="fas fa-mars" />
-                    <input type="radio" checked={userData === 'male'} name="gender" value='male' onClick={(e) => setUserData('male')} />
+           
+                <div className="firstStep__gender">
+                <h2>What gender do you most identify with?</h2> 
+                <label className="container__label">Male 
+                    <input type="radio"  name="group1" value={userData['male']} onClick={(e) => setUserData('male')} />
                     <span className="checkmark"></span>
                     </label>
-                    <label className="container">Female <Icon className="fas fa-venus" />
-                    <input type="radio" checked={userData === 'female'} name="gender" value='female' onClick={(e) => setUserData('female')} />
+                    <label className="container__label">Female 
+                    <input type="radio"  name="group1" value={userData['female']} onClick={(e) => setUserData('female')} />
                     <span className="checkmark"></span>
                     </label>
-                    {/* Male
-                   
-                    <Icon className="fas fa-mars" /> */}
+                  
                 </div>
-                {/* <div>
-                    Female
-            
-                    <Icon className="fas fa-venus" />
-                </div> */}
-            </div>
+                {/* <Icon className="fas fa-mars" /> */}
+                {/* <Icon className="fas fa-venus" /> */}
+           
             <div className="firstStep__title" >
                
                <h2>Are you currently pregnant or breastfeeding?</h2>
-                    <label className="container">Yes
-                    <input type="radio" checked={userData === 'yes'} name="pregnant" value='yes' onClick={(e) => setUserData(e.target.value)} />
+                    <label className="container__label">Yes
+                    <input type="radio" name="group2" value={userData['yes']} onClick={(e) => setUserData(e.target.value)} />
                     <span className="checkmark"></span>
                     </label>
-                    <label className="container">No
-                    <input type="radio" name="pregnant" value='no' checked={userData === 'no'}  onClick={(e) => setUserData(e.target.value)}/>
+                    <label className="container__label">No
+                    <input type="radio" name="group2" value={userData['no']} onClick={(e) => setUserData(e.target.value)}/>
                     <span className="checkmark"></span>
                     </label>
             </div>

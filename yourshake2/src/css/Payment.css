@@ -6,7 +6,7 @@
     text-align: center;
     padding: 10px;
     font-weight: 400;
-    background-color: rgb(234, 237, 237);
+    background-color:#f4f4f4;
     border-bottom: 1px solid lightgray;
   }
 
@@ -35,4 +35,27 @@
 
   .payment__details > h3 {
     padding-bottom: 20px;
+  }
+
+  .payment__priceContainer h3 {
+    margin-top: 20px;
+  }
+
+  .payment_btn {
+    margin-top: 20px;
+  }
+
+  .address__form > input {
+    padding: 10px;
+    margin-bottom: 5px;
+  }
+
+  .address__form > button {
+    font-weight: bold;
+  }
+
+  .address__form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
   }

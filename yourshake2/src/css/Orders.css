@@ -1,0 +1,18 @@
+.orders{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 100px 60px 100px 60px;
+    height: 45vh;
+}
+
+.orders h1{
+    margin-bottom: 20px;
+}
+
+.orders_p {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}

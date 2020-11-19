@@ -3,7 +3,7 @@ import "./css/Login.css"
 import {Link,useHistory} from "react-router-dom"
 import {auth} from "./firebase"
 import PersonOutlineIcon from '@material-ui/icons/PersonOutline';
-import Icon from '@material-ui/core/Icon';
+import HighlightOffIcon from '@material-ui/icons/HighlightOff';
 
 
 function Login() {
@@ -28,6 +28,13 @@ function Login() {
             <div className="login__container">
    
             <div className="login__left bg_dark">
+               {/* <div className="about__icon">
+                    <Link to="/">
+                        <span className="about__iconX">
+                            <HighlightOffIcon/>
+                        </span>
+                    </Link>
+                </div> */}
                 <h1>Sign in</h1>
                 <p>New user? <Link to="/register" className="login__createLink"><span className="login__createLink">Create an account</span></Link></p>
 

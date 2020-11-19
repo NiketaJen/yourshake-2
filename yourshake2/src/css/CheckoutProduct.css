@@ -23,3 +23,20 @@
     font-size: 17px;
     font-weight: 800;
 }
+
+.checkoutProduct__companyName{
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+.checkoutProduct__productName {
+    margin-bottom: 2px;
+}
+
+.checkoutProduct__price{
+    margin-bottom: 5px;
+}
+
+.checkoutProduct__removeBtn{
+    font-weight: bold;
+}

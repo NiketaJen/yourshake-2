@@ -1,19 +1,26 @@
 import React from 'react'
 import "./css/Info.css"
 import HighlightOffIcon from '@material-ui/icons/HighlightOff';
-import { Link } from "react-router-dom"
+import { Link, useHistory } from "react-router-dom"
 
 function Info() {
+    let history = useHistory();
+
+    const handleQuiz =() => {
+        history.push('/quiz')
+    }
+
     return (
         <div className="info">
+            
              <div className="info__container">
-                <div className="info__icon">
+                {/* <div className="info__icon">
                     <Link to="/">
                         <span className="info__iconX">
                             <HighlightOffIcon/>
                         </span>
                     </Link>
-                </div>
+                </div> */}
                 <div className="info__title">
                     <span className="info__titleLineOne">What are Protien Supplements</span>
                     {/* <span className="info__titleLineTwo">motto is</span> */}
@@ -28,10 +35,12 @@ function Info() {
                     
                 </div>
                 <div className="info__btn">
-                     <button className="info__btn btn_dark">Take The Quiz</button>
+                     <button className="info__btn btn_dark" onClick={handleQuiz}>Take The Quiz</button>
                 </div>
 
             </div>
+
+            <div className="info__image"></div>
         </div>
     )
 }

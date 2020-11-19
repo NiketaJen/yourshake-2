@@ -5,25 +5,33 @@ import {auth, db} from "./firebase"
 import PersonOutlineIcon from '@material-ui/icons/PersonOutline';
 
 function Register() {
-    const[firstName, setFirstName] = useState('')
-    const[lastName, setLastName] = useState('')
+   // const[firstName, setFirstName] = useState('')
+    //const[lastName, setLastName] = useState('')
     const[email, setEmail] = useState('')
     const[password, setPassword] = useState('')
 
     let history = useHistory()
 
+    // const registerActions = (auth) => {
+    //     db.collection('users').doc(auth.user.uid).set({
+    //                 firstName: firstName, 
+    //                  lastName: lastName
+    //             })
+
+    // }
+
     const register = (e) => {
         e.preventDefault();
 
         auth.createUserWithEmailAndPassword(email, password)
-        .then(cred => {
-            return db.collection('users').doc(cred.user.uid).set({
-                firstName: firstName, 
-                 lastName: lastName
-            })
-        })
+        // .then(cred => {
+        //     return db.collection('users').doc(cred.user.uid).set({
+        //         firstName: firstName, 
+        //          lastName: lastName
+        //     })
+        // })
         .then(auth => {
-            console.log(auth)
+            console.log( "This is the auth >>>>>", auth)
             if (auth) {
                 history.push('/')
             }
@@ -40,9 +48,9 @@ function Register() {
 
                     <form className="register__form">
                         
-                        <input type="text" placeholder="First Name" name="firstName" onChange={e => setFirstName(e.target.value)} value={firstName} /> 
+                        {/* <input type="text" placeholder="First Name" name="firstName" onChange={e => setFirstName(e.target.value)} value={firstName} /> 
 
-                        <input type="text" placeholder="Last Name" name="lastName" onChange={e => setLastName(e.target.value)} value={lastName} /> 
+                        <input type="text" placeholder="Last Name" name="lastName" onChange={e => setLastName(e.target.value)} value={lastName} />  */}
 
                         <input type="text" placeholder="Email" onChange={e => setEmail(e.target.value)} value={email} />  
                         

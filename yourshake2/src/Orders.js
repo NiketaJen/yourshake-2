@@ -13,7 +13,7 @@ function Orders() {
         db
         .collection('users')
         .doc(user?.uid)
-        .collection('orders')
+        .collection('orders') //creats and adds orders collection to current user once purchase is placed 
         .orderBy('created', 'desc')
         .onSnapshot(snapshot => (
             setOrders(snapshot.docs.map(doc => ({
@@ -29,11 +29,13 @@ function Orders() {
     return (
         <div className="orders">
             <h1>Your Orders</h1>
+        
             <div className='orders__order'>
                 {orders?.map(order => (
                     <Order order={order} />
                 ))}
             </div>
+        
         </div>
     )
 }

@@ -25,7 +25,7 @@ import Confirmation from './quiz/Confirmation';
 
 const promise = loadStripe(
   'pk_test_51HaQvdHz6uqE0kpwb045mDab5s8ii1EqqtjGC3R1cjj5WYBHG7Ldd3s4h44WxGRKSM1hpzXMw49mw9HfcihGi1mH00ZfG1OYiZ'
-  );
+  )
 
 function App() {
   const[{}, dispatch] = useStateValue()
@@ -59,7 +59,7 @@ function App() {
           <Route path="/products/:id">
               <Header />
               <SingleProductContainer/>
-              {/* <Footer/> */}
+              <Footer/>
           </Route>
           <Route path="/products">
               <Header />
@@ -85,6 +85,7 @@ function App() {
           <Route path="/orders">
               <Header />
               <Orders/>
+              <Footer/>
           </Route>
           <Route path="/confirmation">
               <Header />

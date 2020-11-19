@@ -36,7 +36,7 @@ function CheckoutProduct({id, companyName, productName, price, mainImage}) {
                         <p>⭐️</p>
                     ))}
                 </div> */}
-                <button className="btn_light3" onClick={removeFromCart}>Remove from Cart</button>
+                <button className="checkoutProduct__removeBtn btn_light3" onClick={removeFromCart}>Remove from Cart</button>
 
             </div>
             

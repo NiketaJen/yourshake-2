@@ -3,7 +3,7 @@ import "./css/SingleProduct.css"
 import { useStateValue } from "./StateProvider";
 import StarBorderIcon from '@material-ui/icons/StarBorder';
 
-function SingleProduct({id, companyName, productName, price, flavorCount, description, mainImage}) {
+function SingleProduct({id, companyName, productName, price, flavorCount, description, mainImage, rating}) {
     const[{cart}, dispatch] = useStateValue();
   
     const addToCart = () => {
@@ -17,10 +17,12 @@ function SingleProduct({id, companyName, productName, price, flavorCount, descri
                 mainImage: mainImage,
                 price: price,
                 productName: productName,
-                // rating: rating,
+                rating: rating,
             }
         });
     };
+
+    // const rating = []
 
     return (
         <div className='singleProduct'>
@@ -59,10 +61,22 @@ function SingleProduct({id, companyName, productName, price, flavorCount, descri
                             <div className="sectionTitle bg_light">
                                 Product Highlights
                             </div>
+                            <ul>
+                                <p>Everyday Performance</p>
+                                <p>Soy Free</p>
+                                <p>Flavored with Natural Flavors</p>
+                                <p>Use Before Workout</p>
+                                <p>Use After Workout</p>
+                            </ul>
+                            
                     </div>
                     {/* Important Disclosure */}
                     <p className="singleProduct__disclosure">Important Disclosure</p>
                     {/* Social Media Buttons */}
+                    {/* <p className="singleProduct__disclosureHidden"> Always consult with your healthcare professional and read information
+                        provided by the product label or packaging, prior to consuming any nutritional
+                        supplement.
+                    </p> */}
 
                     </div>
            </div>
@@ -80,14 +94,14 @@ function SingleProduct({id, companyName, productName, price, flavorCount, descri
                         Customer Reviews
                     </div>
     <p>Be the first to leave a review. We'd love to hear about your experience with {companyName}'s {productName}. 
-    Think of it as helping a friend in need.</p>
-                    {/* <div className="product__rating">
+        Think of it as helping a friend in need.</p>
+                    <div className="product__rating">
                     {Array(rating)
                         .fill()
                         .map((_, i) => (
-                        <p><StarBorderIcon/></p>
+                        <p><StarBorderIcon/> <StarBorderIcon/> <StarBorderIcon/> <StarBorderIcon/> <StarBorderIcon/></p>
                         ))}
-                </div> */}
+                </div>
                 </div>
             </div>
          

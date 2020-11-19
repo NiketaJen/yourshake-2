@@ -21,6 +21,7 @@ function Product(props) {
                 price: product.price,
                 description: product.description,
                 flavorCount: product.flavorCount,
+                rating: product.rating,
             }
         });
         history.push(`/products/${product.id}`)
