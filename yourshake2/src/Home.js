@@ -28,7 +28,7 @@ function Home() {
             </div>
             <div className="home__buttons">
                 <button className="btn_dark3" onClick={handleClick}>What Is Your Shake</button>
-                <button className="btn_dark" onClick={handleQuiz}>Take The Quiz</button>
+                <button className="btn_quiz btn_dark" onClick={handleQuiz}>Take The Quiz</button>
             </div>
             </div>
             <div className="home__brands">
@@ -37,10 +37,10 @@ function Home() {
                 </div>
                 <div className="home__brandsList">
                     <p className="home__brandsName">Muscle Milk</p>
-                    <p className="home__brandsName">Muscle Milk</p>
-                    <p className="home__brandsName">Muscle Milk</p>
-                    <p className="home__brandsName">Muscle Milk</p>
-                    <p className="home__brandsName">Muscle Milk</p>
+                    <p className="home__brandsName">Dymatize</p>
+                    <p className="home__brandsName">SunWarrior</p>
+                    <p className="home__brandsName">Isopure</p>
+                    <p className="home__brandsName">BSN</p>
                 </div>
             </div>
         </div>

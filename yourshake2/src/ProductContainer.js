@@ -37,7 +37,7 @@ function ProductContainer() {
     return (
         <div className="productContainer">
             <div className="productContainer__pageCounter">
-                <h4>I'm a page counter</h4>
+                {/* <h4>I'm a page counter</h4> */}
             </div>
             
             <div className="productContainer__row">

@@ -1,7 +1,7 @@
-.singleProductContainer {
+/* .singleProductContainer {
     display: flex;
     justify-content: center;
-}
+} */
 
 .singleProductContainer__link {
     color: #000000;
@@ -10,4 +10,9 @@
 
 button:focus {
     outline:0;
+}
+
+.singleProductContainer__btn {
+    margin: 30px;
+    cursor: pointer;
 }

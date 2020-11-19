@@ -4,6 +4,7 @@
     align-items: center;
     flex-direction: column;
     margin: 100px 60px 100px 60px;
+   
 }
 .confirmation__main {
     display: flex;

@@ -26,6 +26,7 @@ function Payment() {
 
     const[address1, setAddress1] = useState('')
     const[address2, setAddress2] = useState('')
+    const[city, setCity] = useState('')
     const[country, setCountry] = useState('')
     const[state, setState] = useState('')
     const[zip, setZip] = useState('')
@@ -43,7 +44,7 @@ function Payment() {
         }
         getClientSecret()
     }, [cart])
-
+  
     console.log('THE SECRET IS >>>', clientSecret)
     console.log('👱', user)
 
@@ -56,6 +57,7 @@ function Payment() {
         .set({
             address1: address1, 
             address2: address2, 
+            city: city,
             country: country,
             state: state, 
             zip: zip, 
@@ -63,17 +65,53 @@ function Payment() {
     }
 
     const handleSubmit = async (e) => {
+        console.log("this is the data" , db)
         // stripe code 
         e.preventDefault();
-        setProcessing(true); //allows user to only click buy button once
-
-        const payload = await stripe.confirmCardPayment(clientSecret, {
-            payment_method: {
-                card: elements.getElement(CardElement)
+         setProcessing(true); //allows user to only click buy button once
+        
+        
+         const payload = await stripe.confirmCardPayment(clientSecret, {
+             payment_method: {
+                 card: elements.getElement(CardElement)
             }
-        }).then(({paymentIntent}) => {
+         })
+        //  .then({
+        //     db
+        //     .collection('users')
+        //     .doc(user?.uid)
+        //     .collection('orders')
+        //     .doc("pi_3cxNdJ1IoO1vgI21Mxl8")
+        //     .set({
+        //         cart: {
+        //             id:2,
+        //            companyName: "Muscle Milk"} ,
+        //         amount: 2999,
+        //         created: 1602694549
+        //     },{merge: true})
+        //  })
+    
+        //  .then(paymentIntent => {
+        //      console.log(db.collection('users'))
+        //  })
+        //  .then(paymentIntent => {
+        //     db
+        //     .collection('users')
+        //     .doc(user?.uid)
+        //     .collection('orders')
+        //     .doc("pi_3cxNdJ1IoO1vgI21Mxl8")
+        //     .set({
+        //         cart: {
+        //                 id:2,
+        //                 companyName: "Muscle Milk"} ,
+        //             amount: 2999,
+        //             created: 1602694549
+        //     },{merge: true})
+        //  }) 
+      
+         .then(({paymentIntent}) => {
             //paymentIntent = payment confirmation
-
+           
             db
             .collection('users')
             .doc(user?.uid)
@@ -94,8 +132,8 @@ function Payment() {
           })
 
             history.replace('/orders')
-        })
-    }
+       })
+     }
 
     const handleChange = event => {
         // listens to changes on card element
@@ -120,16 +158,20 @@ function Payment() {
                         <h3>Delivery Address</h3>
                     </div>
                     <div className="payment__address">
-                        <p>{user?.firstName}</p>
-                        <form onSubmit={updateUser}>
+                        {/* <p>{user?.email}</p> */}
+                        <p>1020 Graduation Blvd</p>
+                        <p>Houston, TX</p>
+                        <p>77584</p>
+                        {/* <form className="address__form" onSubmit={updateUser}>
                             <input type="text" placeholder="Street Address" onChange={e => setAddress1(e.target.value)} value={address1} />  
                             <input type="text" placeholder="Apartment, suite, building, floor" onChange={e => setAddress2(e.target.value)} value={address2} />
+                            <input type="text" placeholder="City" onChange={e => setCity(e.target.value)} value={city}  /> 
                             <input type="text" placeholder="State" onChange={e => setState(e.target.value)} value={state}  /> 
                             <input type="text" placeholder="Country" onChange={e => setCountry(e.target.value)} value={country} /> 
                             <input type="text" placeholder="Zip Code" onChange={e => setZip(e.target.value)} value={zip}  /> 
 
                             <button  type="submit" className="payment__addressButton btn_light">Submit</button> 
-                        </form>
+                        </form> */}
                     </div>
                 </div>
                 {/* payment section - review items */}
@@ -172,7 +214,7 @@ function Payment() {
                                     thousandSeparator={true}
                                     prefix={"$"}
                                 />
-                                <button className="btn_dark" disabled={processing || disabled || succeeded}>
+                                <button className="payment_btn btn_dark" disabled={processing || disabled || succeeded}>
                                     <span>{processing ? <p>Processing</p> : "Buy Now"}</span>
                                 </button>
                             </div>
